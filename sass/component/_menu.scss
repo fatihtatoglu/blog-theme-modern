@@ -1,0 +1,167 @@
+// Guidances
+.color-box.menu {
+    pre {
+        &.normal {
+            background-color: var(--menu-normal-bg);
+            color: var(--menu-normal-fg);
+
+            &.firstletter {
+                background-color: var(--menu-normal-firstletter-bg);
+                color: var(--menu-normal-firstletter-fg);
+            }
+        }
+
+        &.selected {
+            background-color: var(--menu-selected-bg);
+            color: var(--menu-selected-fg);
+
+            &.firstletter {
+                background-color: var(--menu-selected-firstletter-bg);
+                color: var(--menu-selected-firstletter-fg);
+            }
+        }
+
+        &.disabled {
+            background-color: var(--menu-disabled-bg);
+            color: var(--menu-disabled-fg);
+
+            &.selected {
+                background-color: var(--menu-disabled-selected-bg);
+                color: var(--menu-disabled-selected-fg);
+            }
+        }
+    }
+}
+
+
+// Styles
+nav {
+    background-color: var(--menu-bg);
+
+    margin: 0px auto;
+
+    span.menu-button {
+        color: var(--menu-toggle-button-fg);
+        font-size: 24px;
+        line-height: 1;
+
+        text-align: right;
+
+        padding: 0px 13px;
+
+        cursor: pointer;
+    }
+
+    ul {
+        padding: 0px;
+        margin: 0px;
+
+        list-style: none;
+
+        li {
+            padding: 0px;
+
+            &::before {
+                display: none;
+            }
+
+            a:link,
+            a:visited,
+            a:hover {
+                background-color: var(--menu-normal-bg);
+                color: var(--menu-normal-fg);
+
+                font-weight: $text-bold-font-weight;
+
+                padding: 0px 9px;
+
+                display: block;
+
+                &::first-letter {
+                    background-color: var(--menu-normal-firstletter-bg);
+                    color: var(--menu-normal-firstletter-fg);
+                }
+            }
+
+            a:active,
+            a:hover {
+                background-color: var(--menu-selected-bg);
+                color: var(--menu-selected-fg);
+
+                &::first-letter {
+                    background-color: var(--menu-selected-firstletter-bg);
+                    color: var(--menu-selected-firstletter-fg);
+                }
+            }
+
+            &.disabled {
+
+                a:link,
+                a:visited,
+                a:hover,
+                a:link::first-letter,
+                a:visited::first-letter,
+                a:hover::first-letter {
+                    background-color: var(--menu-disabled-bg);
+                    color: var(--menu-disabled-fg);
+
+                    cursor: default;
+                }
+
+                a:active,
+                a:hover,
+                a:focus::first-letter,
+                a:active::first-letter,
+                a:hover::first-letter {
+                    background-color: var(--menu-disabled-selected-bg);
+                    color: var(--menu-disabled-selected-fg);
+
+                    cursor: default;
+                }
+            }
+
+            div.sub-menu {
+
+                background-color: var(--menu-bg);
+
+                margin: 0px;
+                padding: 7px 11px;
+
+                display: none;
+
+                z-index: 2;
+
+                ul {
+                    padding-bottom: 7px;
+                    padding-top: 8px;
+
+                    border: 2px solid var(--menu-border);
+
+                    border-top-width: 1px;
+                    border-bottom-width: 1px;
+
+                    li {
+                        margin: 0px 3px;
+
+                        display: block;
+
+                        &[role=separator] {
+                            width: 100%;
+
+                            margin: 7px 0px 8px 0px;
+
+                            border-bottom: 1px solid var(--menu-border);
+                        }
+
+                        a {
+                            margin: 0px;
+                            padding: 3px 8px;
+
+                            min-width: 150px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

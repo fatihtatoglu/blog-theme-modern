@@ -1,0 +1,166 @@
+// Guidances
+.color-box.layout {
+    pre {
+        &.header {
+            background-color: var(--header-bg);
+            color: var(--header-fg);
+        }
+    }
+}
+
+
+// Styles
+* {
+    cursor: var(--cursor), auto !important;
+}
+
+body {
+    background-color: var(--body-bg);
+    background-image: radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%), radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%);
+    background-size: 6px 6px;
+    background-position: 0 0, 3px 3px;
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--header-fg);
+
+    margin: var(--header-margin-top) auto var(--header-margin-bottom) auto;
+
+    padding: 5px 10px;
+
+    display: block;
+
+    span.site-name {
+        background-color: var(--text-heading-bg);
+        color: var(--text-heading-fg);
+
+        font-weight: $text-bold-font-weight;
+        line-height: 1.2;
+
+        text-transform: uppercase;
+
+        padding: 3px 8px;
+
+        display: table;
+
+        cursor: default;
+    }
+}
+
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-fg);
+
+    text-align: center;
+
+    height: var(--footer-height);
+
+    padding: 0px;
+    margin: var(--footer-margin-top) auto var(--footer-margin-bottom) auto;
+
+    span.credits {
+        display: inline-block;
+        margin: var(--footer-credits-margin-top) 0px;
+    }
+}
+
+main {
+    background-color: var(--main-bg);
+    color: var(--text-active-fg);
+
+    min-height: calc(100vh - var(--main-height));
+
+    margin: 0px auto;
+    padding: 15px 3px 7px 3px;
+}
+
+article {
+    background-color: var(--article-bg);
+    color: var(--article-fg);
+    border: 4px double var(--article-header-border);
+
+    position: relative;
+
+    min-height: 150px;
+
+    padding: 10px 3px;
+
+    >header {
+        line-height: 1;
+        text-align: center;
+
+        background-color: transparent;
+
+        width: 100%;
+        height: inherit;
+
+        margin: 0px;
+        padding: 0px;
+
+        display: inline;
+        position: absolute;
+        top: -10px;
+        left: 0px;
+
+        >h1 {
+            background-color: var(--article-bg);
+            color: var(--article-header-fg);
+            border: none;
+
+            line-height: 1;
+            text-transform: uppercase;
+
+            padding: 0px 8px;
+            margin: 0px;
+
+            display: inline-block;
+        }
+
+        >button {
+            box-shadow: none;
+            background-color: var(--article-bg);
+            color: var(--dialog-icon-fg);
+            position: absolute;
+            padding: 0;
+            margin: 0;
+            min-width: inherit;
+            font-size: 12px;
+            top: 0px;
+            right: 12px;
+
+            &:focus {
+                background-color: var(--article-bg);
+                color: var(--dialog-icon-fg);
+            }
+
+            &::before,
+            &:after {
+                color: var(--dialog-title-fg);
+                background-color: var(--article-bg);
+                font-size: 16px;
+            }
+
+            &::before {
+                content: "[";
+            }
+
+            &::after {
+                content: "]";
+            }
+        }
+    }
+
+    >footer {
+        background-color: var(--article-bg);
+        color: var(--text-active-fg);
+
+        text-align: center;
+
+        margin: 0px;
+        padding: 30px 0px 0px 0px;
+
+        width: 100% !important;
+        height: inherit;
+    }
+}

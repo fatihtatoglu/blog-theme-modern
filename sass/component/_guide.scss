@@ -1,0 +1,13 @@
+.color-box {
+    background-color: var(--white);
+    color: var(--black);
+
+    margin: 0px 10px 0px 10px;
+    display: inline-block;
+}
+
+.color-box pre {
+    padding: 0px;
+    margin: 0px;
+    font-weight: 700;
+}

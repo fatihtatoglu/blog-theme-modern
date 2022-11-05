@@ -1,0 +1,159 @@
+// Guidances
+.color-box.typo {
+    pre {
+        &.active {
+            background-color: var(--text-active-bg);
+            color: var(--text-active-fg);
+        }
+
+        &.selected {
+            background-color: var(--text-selected-bg);
+            color: var(--text-selected-fg);
+        }
+
+        &.keyword {
+            background-color: var(--text-keyword-active-bg);
+            color: var(--text-keyword-active-fg);
+        }
+
+        &.keyword-selected {
+            background-color: var(--text-keyword-selected-bg);
+            color: var(--text-keyword-selected-fg);
+        }
+
+        &.heading {
+            background-color: var(--text-heading-bg);
+            color: var(--text-heading-fg);
+        }
+    }
+}
+
+
+// Styles
+body {
+    background-color: var(--text-active-bg);
+    color: var(--text-active-fg);
+
+    font-size: $text-size;
+    font-weight: $text-font-weight;
+    font-family: $font-family;
+    line-height: $text-line-height;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    background-color: var(--text-heading-bg);
+    color: var(--text-heading-fg);
+    border-bottom: var(--text-heading-border) solid 7px;
+
+    font-size: 16rem;
+    font-weight: $text-bold-font-weight;
+    line-height: 1.2;
+
+    margin: 12px 8px;
+
+    display: table;
+
+    cursor: default;
+}
+
+h1,
+h2 {
+    padding: 3px 8px;
+}
+
+h3,
+h4 {
+    padding: 10px;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h2 {
+    border-top: var(--text-heading-border) solid 10px;
+}
+
+h4 {
+    border-top: var(--text-heading-border) solid 1px;
+    border-bottom: var(--text-heading-border) solid 1px;
+    border-left: var(--text-heading-border) solid 2px;
+    border-right: var(--text-heading-border) solid 2px;
+}
+
+p {
+    background-color: var(--text-active-bg);
+    color: var(--text-active-fg);
+
+    font-size: 16rem;
+    font-weight: $text-font-weight;
+
+    margin: 10px 0px;
+}
+
+strong {
+    font-weight: $text-bold-font-weight;
+}
+
+em {
+    font-style: italic;
+}
+
+a {
+
+    &:link,
+    &:visited {
+        background-color: var(--text-keyword-active-bg);
+        color: var(--text-keyword-active-fg);
+    }
+
+    &:focus,
+    &:active {
+        background-color: var(--text-keyword-selected-bg);
+        color: var(--text-keyword-selected-fg);
+
+        outline: none;
+    }
+}
+
+address,
+time {
+    font-style: italic;
+
+    display: inline-block;
+}
+
+blockquote {
+    background-color: var(--text-quotation-bg);
+    color: var(--text-quotation-fg);
+    border: 4px double var(--text-quotation-border);
+    border-left: 7px solid var(--text-quotation-border);
+
+    margin: 12px 8px;
+    padding: 0px;
+
+    display: block;
+
+    p {
+        background-color: var(--text-quotation-bg);
+        color: var(--text-quotation-fg);
+
+        font-style: italic;
+
+        margin: 0px 10px;
+        padding: 0px;
+    }
+}
+
+::-moz-selection {
+    background-color: var(--text-selected-bg);
+    color: var(--text-selected-fg);
+}
+
+::selection {
+    background-color: var(--text-selected-bg);
+    color: var(--text-selected-fg);
+}

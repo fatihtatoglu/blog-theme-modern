@@ -1,0 +1,165 @@
+// Guidances
+.color-box.textbox {
+    pre {
+        &.normal {
+            background-color: var(--textbox-normal-bg);
+            color: var(--textbox-normal-fg);
+        }
+
+        &.volatile {
+            background-color: var(--textbox-volatile-bg);
+            color: var(--textbox-volatile-fg);
+        }
+
+        &.selected {
+            background-color: var(--textbox-selected-bg);
+            color: var(--textbox-selected-fg);
+        }
+
+        &.disabled {
+            background-color: var(--textbox-disabled-bg);
+            color: var(--textbox-disabled-fg);
+        }
+    }
+}
+
+.text-field {
+    background-color: var(--textbox-normal-bg);
+    color: var(--textbox-normal-fg);
+
+    font-weight: $text-bold-font-weight;
+    line-height: 1.1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 3px 8px;
+
+    margin: 3px 0px;
+
+    &:focus {
+        background-color: var(--textbox-selected-bg);
+        color: var(--textbox-selected-fg);
+    }
+
+    &::-moz-selection {
+        background-color: var(--textbox-volatile-bg);
+        color: var(--textbox-volatile-fg);
+    }
+
+    &::selection {
+        background-color: var(--textbox-volatile-bg);
+        color: var(--textbox-volatile-fg);
+    }
+
+    &:disabled {
+        background-color: var(--textbox-disabled-bg);
+        color: var(--textbox-disabled-fg);
+
+        &::-moz-selection {
+            background-color: var(--textbox-disabled-bg);
+            color: var(--textbox-disabled-fg);
+        }
+
+        &::selection {
+            background-color: var(--textbox-disabled-bg);
+            color: var(--textbox-disabled-fg);
+        }
+    }
+}
+
+// Styles
+input[type=text],
+input[type=password],
+input[type=email],
+input[type=tel],
+input[type=number] {
+    @extend .text-field;
+}
+
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+textarea {
+    @extend .text-field;
+
+    background-color: var(--textbox-scrollbar-arrow-bg);
+
+    min-height: 150px;
+
+    resize: none;
+
+    &::-webkit-scrollbar {
+        width: 16rem;
+        height: 16rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--textbox-scrollbar-bg-2);
+        background-image: repeating-linear-gradient(45deg, var(--textbox-scrollbar-bg-1) 25%, transparent 25%, transparent 75%, var(--textbox-scrollbar-bg-1) 75%, var(--textbox-scrollbar-bg-1)), repeating-linear-gradient(45deg, var(--textbox-scrollbar-bg-1) 25%, var(--textbox-scrollbar-bg-2) 25%, var(--textbox-scrollbar-bg-2) 75%, var(--textbox-scrollbar-bg-1) 75%, var(--textbox-scrollbar-bg-1));
+
+        opacity: 1;
+        background-position: 0 0,
+            2px 2px;
+        background-size: 4px 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--textbox-scrollbar-thumb-bg);
+        border: var(--textbox-scrollbar-thumb-border) solid 4px;
+    }
+
+    &::-webkit-scrollbar-button {
+        height: 16px;
+        width: 16px;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: var(--textbox-scrollbar-arrow-bg);
+    }
+
+    &::-webkit-scrollbar-button:vertical:decrement {
+        background: var(--scrollbar-vertical-decrement);
+        background-repeat: no-repeat;
+        background-position-x: 4px;
+        background-position-y: 2px;
+        background-size: 8px 16px;
+    }
+
+    &::-webkit-scrollbar-button:vertical:increment {
+        background: var(--scrollbar-vertical-increment);
+        background-repeat: no-repeat;
+        background-position-x: 4px;
+        background-position-y: 3px;
+        background-size: 8px 16px;
+    }
+
+    &::-webkit-scrollbar-button:horizontal:decrement {
+        background: var(--scrollbar-horizontal-decrement);
+        background-repeat: no-repeat;
+        background-position-x: 1px;
+        background-position-y: 1px;
+        background-size: 12px 16px;
+
+        width: 12rem;
+    }
+
+    &::-webkit-scrollbar-button:horizontal:increment {
+        background: var(--scrollbar-horizontal-increment);
+        background-repeat: no-repeat;
+        background-position-x: 0px;
+        background-position-y: 1px;
+        background-size: 12px 16px;
+
+        width: 12rem;
+    }
+}

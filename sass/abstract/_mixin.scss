@@ -1,0 +1,22 @@
+@use "sass:meta";
+
+@mixin addTheme ($themeName, $themeMap) {
+
+  :root.#{$themeName} {
+
+    @each $key,
+    $value in $themeMap {
+      --#{$key}: #{meta.inspect($value)};
+    }
+  }
+}
+
+@mixin firefox-only {
+  @at-root {
+    @-moz-document url-prefix() {
+      & {
+        @content;
+      }
+    }
+  }
+}
