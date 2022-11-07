@@ -40,6 +40,8 @@ nav {
 
     margin: 0px auto;
 
+    border-right: (--menu-border);
+
     span.menu-button {
         color: var(--menu-toggle-button-fg);
         font-size: 24px;
@@ -71,7 +73,7 @@ nav {
                 background-color: var(--menu-normal-bg);
                 color: var(--menu-normal-fg);
 
-                font-weight: $text-bold-font-weight;
+                font-weight: $text-font-weight;
 
                 padding: 0px 9px;
 
@@ -135,10 +137,10 @@ nav {
                     padding-bottom: 7px;
                     padding-top: 8px;
 
-                    border: 2px solid var(--menu-border);
+                    // border: 2px solid var(--menu-border);
 
-                    border-top-width: 1px;
-                    border-bottom-width: 1px;
+                    // border-top-width: 1px;
+                    // border-bottom-width: 1px;
 
                     li {
                         margin: 0px 3px;
@@ -150,7 +152,7 @@ nav {
 
                             margin: 7px 0px 8px 0px;
 
-                            border-bottom: 1px solid var(--menu-border);
+                            // border-bottom: 1px solid var(--menu-border);
                         }
 
                         a {

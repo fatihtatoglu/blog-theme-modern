@@ -10,39 +10,45 @@
 
 
 // Styles
-* {
-    cursor: var(--cursor), auto !important;
-}
+// * {
+//     cursor: var(--cursor), auto !important;
+// }
 
 body {
     background-color: var(--body-bg);
-    background-image: radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%), radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%);
-    background-size: 6px 6px;
-    background-position: 0 0, 3px 3px;
+    // background-image: radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%), radial-gradient(circle, var(--body-bg-pattern) 25%, transparent 10%);
+    // background-size: 6px 6px;
+    // background-position: 0 0, 3px 3px;
 }
 
 header {
     background-color: var(--header-bg);
     color: var(--header-fg);
 
-    margin: var(--header-margin-top) auto var(--header-margin-bottom) auto;
+    // margin: var(--header-margin-top) auto var(--header-margin-bottom) auto;
 
-    padding: 5px 10px;
+    // padding: 5px 10px;
+
+    padding: 10px 0px 0px 20px;
 
     display: block;
+
+    border-bottom: var(--header-border);
+    width: 100%;
 
     span.site-name {
         background-color: var(--text-heading-bg);
         color: var(--text-heading-fg);
 
+        font-size: 13px;
         font-weight: $text-bold-font-weight;
         line-height: 1.2;
 
-        text-transform: uppercase;
+        text-transform: lowercase;
 
-        padding: 3px 8px;
+        // padding: 3px 8px;
 
-        display: table;
+        // display: table;
 
         cursor: default;
     }
@@ -102,6 +108,8 @@ article {
         position: absolute;
         top: -10px;
         left: 0px;
+
+        box-shadow: none;
 
         >h1 {
             background-color: var(--article-bg);

@@ -5,7 +5,7 @@ $dialog-width: $site-width-micro * 0.70;
 $dialog-large-width: $site-width-micro * 0.90;
 
 $header-margin-top: 0px;
-$header-height: 45px;
+$header-height: 44px;
 $header-margin-bottom: 0px;
 
 $footer-margin-top: 0px;
@@ -48,7 +48,9 @@ header {
     span.site-name {
         font-size: 24rem;
 
-        border-bottom: 0px;
+        // border-bottom: 0px;
+
+        border: none;
 
         margin-left: auto;
         margin-right: auto;
@@ -100,13 +102,13 @@ nav {
     $dialog-width: $site-width-mini * 0.5;
     $dialog-large-width: $site-width-mini * 0.75;
 
-    $header-margin-top: 20px;
-    $header-height: 70px;
+    $header-margin-top: 0px;
+    $header-height: 44px;
     $header-margin-bottom: 0px;
 
-    $footer-margin-top: 15px;
+    $footer-margin-top: 0px;
     $footer-height: 50px;
-    $footer-margin-bottom: 10px;
+    $footer-margin-bottom: 0px;
     $footer-credits-margin-top: pixel(math.div(stripUnit($footer-height) - (stripUnit($text-size) * $text-line-height), 2));
 
     $nav-height: stripUnit($text-size) * $text-line-height;
@@ -144,8 +146,11 @@ nav {
         span.site-name {
             font-size: 16rem;
 
-            border-bottom: var(--text-heading-border) solid 7px;
-            margin: 12px 8px;
+            // border-bottom: var(--text-heading-border) solid 7px;
+
+            border:none;
+
+            // margin: 12px 8px;
         }
     }
 
