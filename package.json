@@ -1,19 +1,19 @@
 {
-  "name": "blog-theme-turboc",
+  "name": "blog-theme-modern",
   "version": "1.0.0",
-  "description": "Turbo C/C++ Web Theme",
+  "description": "Modern Web Theme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fatihtatoglu/blog-theme-turboc.git"
+    "url": "https://github.com/fatihtatoglu/blog-theme-modern.git"
   },
   "contributors": [
     "Fatih Tatoğlu <https://github.com/fatihtatoglu>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fatihtatoglu/blog-theme-turboc/issues"
+    "url": "https://github.com/fatihtatoglu/blog-theme-modern/issues"
   },
-  "homepage": "https://github.com/fatihtatoglu/blog-theme-turboc#readme",
+  "homepage": "https://github.com/fatihtatoglu/blog-theme-modern#readme",
   "devDependencies": {
     "clean-css": "^5.2.4",
     "glob-parent": "^6.0.2",

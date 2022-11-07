@@ -4,17 +4,17 @@
 @import "abstract/variable";
 
 // Themes 
-@import "theme/theme-aqua";
-@include addTheme("aqua", $theme-aqua);
+// @import "theme/theme-aqua";
+// @include addTheme("aqua", $theme-aqua);
 
-@import "theme/theme-black";
-@include addTheme("black", $theme-black);
+@import "theme/theme-dark";
+@include addTheme("dark", $theme-dark);
 
-@import "theme/theme-blue";
-@include addTheme("blue", $theme-blue);
+// @import "theme/theme-blue";
+// @include addTheme("blue", $theme-blue);
 
-@import "theme/theme-white";
-@include addTheme("white", $theme-white);
+// @import "theme/theme-white";
+// @include addTheme("white", $theme-white);
 
 @import "theme/theme-size";
 
@@ -42,4 +42,3 @@
 
 // Vendor
 @import "vendor/normalize";
-@import "vendor/google_font";
