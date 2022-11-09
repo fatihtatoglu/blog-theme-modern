@@ -86,18 +86,18 @@ nav {
     }
 }
 
-// main>article::after {
-//     content: "< 576px micro";
-//     display: block;
-//     margin: 10px;
-//     padding: 10px;
-// }
+main>article::after {
+    content: "< 576px micro";
+    display: block;
+    margin: 10px;
+    padding: 10px;
+}
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    // main>article::after {
-    //     content: "576px";
-    // }
+    main>article::after {
+        content: "576px";
+    }
 
     $dialog-width: $site-width-mini * 0.5;
     $dialog-large-width: $site-width-mini * 0.75;
@@ -112,6 +112,7 @@ nav {
     $footer-credits-margin-top: pixel(math.div(stripUnit($footer-height) - (stripUnit($text-size) * $text-line-height), 2));
 
     $nav-height: stripUnit($text-size) * $text-line-height;
+    $nav-width: 250px;
 
     $main-height: $header-margin-top+$header-height+$header-margin-bottom+$nav-height+$footer-margin-top+$footer-height+$footer-margin-bottom;
 
@@ -129,13 +130,14 @@ nav {
         --footer-margin-bottom: #{$footer-margin-bottom};
         --footer-credits-margin-top: #{$footer-credits-margin-top};
         --nav-height: #{$nav-height};
+        --nav-width: #{$nav-width};
         --main-height: #{$main-height};
     }
 
     header,
-    footer,
-    main,
-    nav {
+    footer // ,main // ,nav
+
+        {
         width: var(--site-width);
     }
 
@@ -148,7 +150,7 @@ nav {
 
             // border-bottom: var(--text-heading-border) solid 7px;
 
-            border:none;
+            border: none;
 
             // margin: 12px 8px;
         }
@@ -156,6 +158,8 @@ nav {
 
     nav {
         padding: 0px;
+        width: var(--nav-width);
+        min-height: 100vh;
 
         span.menu-button {
             display: none;
@@ -174,77 +178,133 @@ nav {
             }
         }
     }
+
+    main {
+        margin-left: var(--nav-width);
+        width: calc(100vw - var(--nav-width));
+        min-height: 100vh;
+        
+        position: absolute;
+        top: var(--header-height);
+    }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    // main>article::after {
-    //     content: "768px";
-    // }
+    main>article::after {
+        content: "768px";
+    }
 
     $dialog-width: $site-width-narrow * 0.5;
     $dialog-large-width: $site-width-narrow * 0.75;
+    $nav-width: 260px;
 
     :root {
         --site-width: #{$site-width-narrow};
 
         --dialog-width: #{$dialog-width};
         --dialog-large-width: #{$dialog-large-width};
+        --nav-width: #{$nav-width};
     }
 
     header,
-    footer,
-    main,
-    nav {
+    footer // ,main // ,nav 
+
+        {
         width: var(--site-width);
+    }
+
+    nav {
+        width: var(--nav-width);
+        min-height: 100vh;
+    }
+
+    main {
+        margin-left: var(--nav-width);
+        width: calc(100vw - var(--nav-width));
+        min-height: 100vh;
+
+        position: absolute;
+        top: var(--header-height);
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    // main>article::after {
-    //     content: "992px";
-    // }
+    main>article::after {
+        content: "992px";
+    }
 
     $dialog-width: $site-width * 0.5;
     $dialog-large-width: $site-width * 0.75;
+    $nav-width: 260px;
 
     :root {
         --site-width: #{$site-width};
 
         --dialog-width: #{$dialog-width};
         --dialog-large-width: #{$dialog-large-width};
+        --nav-width: #{$nav-width};
     }
 
     header,
-    footer,
-    main,
-    nav {
+    footer // ,main // ,nav 
+
+        {
         width: var(--site-width);
+    }
+
+    nav {
+        width: var(--nav-width);
+        min-height: 100vh;
+    }
+
+    main {
+        margin-left: var(--nav-width);
+        width: calc(100vw - var(--nav-width));
+        min-height: 100vh;
+
+        position: absolute;
+        top: var(--header-height);
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-
-    // main>article::after {
-    //     content: "1200px";
-    // }
+    main>article::after {
+        content: "1200px";
+    }
 
     $dialog-width: $site-width-wide * 0.5;
     $dialog-large-width: $site-width-wide * 0.75;
+    $nav-width: 300px;
 
     :root {
         --site-width: #{$site-width-wide};
 
         --dialog-width: #{$dialog-width};
         --dialog-large-width: #{$dialog-large-width};
+        --nav-width: #{$nav-width};
     }
 
     header,
-    footer,
-    main,
-    nav {
+    footer // ,main // ,nav 
+
+        {
         width: var(--site-width);
+    }
+
+    nav {
+        width: var(--nav-width);
+        min-height: 100vh;
+    }
+
+    main {
+        margin-left: var(--nav-width);
+        width: calc(100vw - var(--nav-width));
+        min-height: 100vh;
+
+        position: absolute;
+        top: var(--header-height);
     }
 }
